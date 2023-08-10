@@ -23,11 +23,11 @@ const Layout = () => {
   });
 
   useEffect(() => {
-    const getTokenAndRegsiter = async () => {
+    const getTokenAndRegister = async () => {
 
       const res = await getAccessTokenWithPopup({
         authorizationParams: {
-          audience: "http://localhost:8000",
+          audience: 'http://localhost:8000',
           scope: "openid profile email",
         },
       });
@@ -37,7 +37,7 @@ const Layout = () => {
     };
 
 
-    isAuthenticated && getTokenAndRegsiter();
+    isAuthenticated && getTokenAndRegister();
   }, [isAuthenticated]);
 
   return (
